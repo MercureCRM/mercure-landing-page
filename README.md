@@ -1,6 +1,6 @@
 # Mércure Landing Page
 
-Projeto Astro estático com uma única página em `src/pages/index.astro`.
+Projeto Astro estático com uma única página em `site/pages/index.html`.
 
 ## Desenvolvimento
 

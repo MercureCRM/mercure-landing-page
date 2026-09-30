@@ -1,0 +1,368 @@
+<!DOCTYPE html><html lang="pt-BR" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="web_standard" name="shell-type">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0052ff",
+            "primary-dark": "#003ec7",
+            "primary-container": "#0052ff",
+            "surface": "#ffffff",
+            "surface-dim": "#f8faff",
+            "surface-container": "#f0f4ff",
+            "surface-container-high": "#e3ebff",
+            "on-surface": "#0e172a",
+            "on-surface-variant": "#475569",
+            "on-primary": "#ffffff",
+            "outline-subtle": "#e2e8f0"
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans", "sans-serif"],
+            "body": ["Plus Jakarta Sans", "sans-serif"],
+            "code": ["JetBrains Mono", "monospace"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-white font-body text-on-surface antialiased selection:bg-primary selection:text-white">
+<!-- Header Fixo -->
+<header class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-outline-subtle">
+<div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between">
+<a class="flex items-center gap-3" href="#inicio">
+<img alt="Mércure Logo" class="h-9 w-9 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyQdCnXj5JKA0i-VE1VOnKiyuwn2eME-jDN8UDD8JmuzZpjqzaf0JrQHXy_Om0g4dXZ6xvDb3pn0F-qZDb7QZNt6GacNuWLwLFimNy1_XdtetsUmdakmcXY6T02BiO3IpMW6bdZpJSC5bqmsZUtj8QJHpC3Sj8K8_cYdQKTPMyxrYm_1wlpIg42-yfiYkDhp63HloOFDj_Y4DNBOYEGtIrU1_Q9W9eKrJhEpUJ7t7Gka_Gj2S-C9edWIH4yDod5eFiflw">
+<span class="font-display font-extrabold text-2xl tracking-tight text-on-surface">Mércure</span>
+</a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold text-primary hover:text-primary-dark transition-colors" href="#inicio">Início</a>
+<a class="text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors" href="#missao">Sobre</a>
+<a class="text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors" href="#projetos">Projetos</a>
+<!-- <a class="text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors" href="#equipe">Equipe</a> -->
+<a class="text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors" href="#contato">Contato</a>
+</nav>
+<div class="flex items-center">
+<a class="inline-flex items-center justify-center bg-primary text-white text-sm font-bold px-6 py-2.5 rounded-lg hover:bg-primary-dark transition-all shadow-sm" href="#contato">
+          Fale Conosco
+        </a>
+</div>
+</div>
+</header>
+<main class="w-full pt-20 bg-white">
+<!-- 1. HERO PRINCIPAL: Sem texto "Mércure", sem caixa cinza, logo oficial grande, planetas ao redor, apenas "Software House", frase de impacto, 1 botão de contato -->
+<section class="relative w-full bg-white pt-12 pb-24 px-6 lg:px-12 overflow-hidden flex flex-col items-center text-center" id="inicio">
+<!-- Elementos Decorativos Orbitais e Planetas em Tons de Azul (Sem Containers Cinzas) -->
+<div class="absolute inset-0 pointer-events-none select-none overflow-hidden">
+<!-- Planeta Azul com Órbita Superior Esquerdo -->
+<svg class="absolute top-10 left-[6%] w-32 h-32 text-primary opacity-60" fill="none" viewBox="0 0 120 120">
+<ellipse cx="60" cy="60" rx="54" ry="20" stroke="currentColor" stroke-dasharray="4 4" stroke-width="1.5" transform="rotate(-20 60 60)"></ellipse>
+<circle cx="60" cy="60" fill="currentColor" r="18"></circle>
+<circle cx="98" cy="48" fill="currentColor" r="4.5"></circle>
+</svg>
+<!-- Planeta Azul Menor Central Esquerda -->
+<svg class="absolute top-1/2 left-[12%] w-16 h-16 text-primary opacity-40" fill="none" viewBox="0 0 60 60">
+<circle cx="30" cy="30" fill="currentColor" r="12"></circle>
+<ellipse cx="30" cy="30" rx="26" ry="8" stroke="currentColor" stroke-dasharray="3 3" stroke-width="1"></ellipse>
+</svg>
+<!-- Planeta Azul Superior Direito com Anel -->
+<svg class="absolute top-16 right-[8%] w-36 h-36 text-primary opacity-55" fill="none" viewBox="0 0 140 140">
+<ellipse cx="70" cy="70" rx="64" ry="22" stroke="currentColor" stroke-dasharray="5 3" stroke-width="1.5" transform="rotate(25 70 70)"></ellipse>
+<circle cx="70" cy="70" fill="currentColor" r="22"></circle>
+<circle cx="20" cy="50" fill="currentColor" r="5"></circle>
+</svg>
+<!-- Pequeno Planeta Inferior Direito -->
+<svg class="absolute bottom-16 right-[14%] w-20 h-20 text-primary opacity-35" fill="none" viewBox="0 0 80 80">
+<circle cx="40" cy="40" fill="currentColor" r="14"></circle>
+<ellipse cx="40" cy="40" rx="36" ry="11" stroke="currentColor" stroke-dasharray="4 2" stroke-width="1.2" transform="rotate(-15 40 40)"></ellipse>
+</svg>
+</div>
+<div class="relative z-10 max-w-5xl mx-auto flex flex-col items-center">
+<!-- Logo Oficial Mércure Grande no Centro (Sem Caixa Cinza) -->
+<div class="w-full flex justify-center py-4">
+<img alt="Mércure Logo Oficial" class="w-full max-w-2xl max-h-[260px] md:max-h-[320px] object-contain select-none" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu9ZLqdTk-BFT70zVmjpZtX0wU-HJtj0TSD0nhPjB35m-3rVHM-4Kyzogmcy6KuZ3cq_PJxMJHgJnQMpjwGOvFrR1i1AWabM8HkRl3c_FJjiKv54eUcia-KeV3JKoTankRbtNcDbFLCR_NQUvTD48gHpOOKnuBFYafkE5Js79TmWK7cFp2wi7xGY0wBVBYk2an_DaItcTH_3LllHL5RSXEhYTZyhHmx_0L9QZzUaGgAs8YFaDt-RCmiI1aDjMTEu972i0">
+</div>
+<!-- Apenas "Software House" abaixo da imagem do logo -->
+<h2 class="font-display font-bold text-3xl sm:text-4xl text-primary tracking-tight mt-2 mb-6">
+          Software House
+        </h2>
+<!-- Frase de Impacto Principal -->
+<div class="max-w-3xl flex flex-col items-center gap-3">
+<p class="font-display font-extrabold text-2xl sm:text-4xl text-on-surface tracking-tight leading-snug">
+            Acima das estrelas. A gente faz acontecer.
+          </p>
+<p class="font-body text-base sm:text-lg text-on-surface-variant max-w-2xl leading-relaxed mt-2">
+            Engenharia de software especializada na criação de produtos digitais robustos, arquiteturas corporativas e desenvolvimento sob medida de alta precisão.
+          </p>
+</div>
+<!-- Apenas UM botão de contato direto -->
+<div class="mt-8">
+<a class="inline-flex items-center justify-center bg-primary text-white font-display font-bold text-base px-8 py-3.5 rounded-xl hover:bg-primary-dark transition-all shadow-md" href="#contato">
+            Fale Conosco
+          </a>
+</div>
+<!-- Competências de Forma Minimalista e Limpa (Sem caixas cinzas pesadas) -->
+<div class="w-full max-w-4xl mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+<div class="p-6 rounded-2xl border border-blue-100 bg-white shadow-sm flex flex-col items-center">
+<div class="w-12 h-12 rounded-xl bg-blue-50 text-primary flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-2xl">dns</span>
+</div>
+<h3 class="font-display font-bold text-lg text-on-surface">Infraestrutura</h3>
+<p class="font-body text-sm text-on-surface-variant mt-2 leading-relaxed">
+              Ambientes escaláveis em nuvem, automação CI/CD, governança e alta disponibilidade contínua.
+            </p>
+</div>
+<div class="p-6 rounded-2xl border border-blue-100 bg-white shadow-sm flex flex-col items-center">
+<div class="w-12 h-12 rounded-xl bg-blue-50 text-primary flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-2xl">web</span>
+</div>
+<h3 class="font-display font-bold text-lg text-on-surface">Desenvolvimento Web</h3>
+<p class="font-body text-sm text-on-surface-variant mt-2 leading-relaxed">
+              Portais, painéis administrativos e plataformas web modulares com máxima performance.
+            </p>
+</div>
+<div class="p-6 rounded-2xl border border-blue-100 bg-white shadow-sm flex flex-col items-center">
+<div class="w-12 h-12 rounded-xl bg-blue-50 text-primary flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-2xl">devices</span>
+</div>
+<h3 class="font-display font-bold text-lg text-on-surface">Aplicativos Mobile</h3>
+<p class="font-body text-sm text-on-surface-variant mt-2 leading-relaxed">
+              Soluções móveis multiplataforma ágeis, com excelente usabilidade e integração de APIs complexas.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. SEÇÃO MISSÃO / PROPÓSITO: Limpa, fundo branco com planetas azuis -->
+<section class="w-full bg-surface-dim py-20 px-6 lg:px-12 relative overflow-hidden border-t border-b border-outline-subtle" id="missao">
+<div class="max-w-4xl mx-auto flex flex-col items-center text-center relative z-10"><span class="font-code text-xs uppercase font-bold tracking-widest text-primary bg-white border border-blue-200 px-4 py-1.5 rounded-full mb-4 shadow-sm">Missão &amp; Propósito</span><h2 class="font-display font-extrabold text-3xl sm:text-5xl text-on-surface tracking-tight leading-tight mb-4">“Acima das estrelas.<br><span class="text-primary">A gente faz acontecer.”</span></h2><p class="font-body text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed mb-6">Tecnologia de ponta com relacionamento humano genuíno. Criamos produtos digitais de alto impacto construídos em parceria próxima e transparente.</p><div class="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-4 py-2 rounded-full mb-10 text-xs sm:text-sm font-medium text-primary"><span class="material-symbols-outlined text-base">location_on</span><span class="">Atuação com foco regional em <strong>MS e Dourados</strong>, transformando ideias em soluções reais com agilidade prática.</span></div><div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full text-left"><div class="bg-white border border-blue-100 rounded-2xl p-6 shadow-sm hover:border-primary transition-colors flex flex-col gap-3"><div class="w-10 h-10 rounded-xl bg-blue-50 text-primary flex items-center justify-center"><span class="material-symbols-outlined text-2xl">verified_user</span></div><h3 class="font-display font-bold text-base text-on-surface tracking-tight">Compromisso com a Qualidade</h3><p class="font-body text-sm text-on-surface-variant leading-relaxed">Excelência do primeiro contato à entrega final.</p></div><div class="bg-white border border-blue-100 rounded-2xl p-6 shadow-sm hover:border-primary transition-colors flex flex-col gap-3"><div class="w-10 h-10 rounded-xl bg-blue-50 text-primary flex items-center justify-center"><span class="material-symbols-outlined text-2xl">handshake</span></div><h3 class="font-display font-bold text-base text-on-surface tracking-tight">Proximidade Real</h3><p class="font-body text-sm text-on-surface-variant leading-relaxed">Lado a lado com cada cliente, ouvindo e construindo juntos.</p></div><div class="bg-white border border-blue-100 rounded-2xl p-6 shadow-sm hover:border-primary transition-colors flex flex-col gap-3"><div class="w-10 h-10 rounded-xl bg-blue-50 text-primary flex items-center justify-center"><span class="material-symbols-outlined text-2xl">lightbulb</span></div><h3 class="font-display font-bold text-base text-on-surface tracking-tight">Soluções com Propósito</h3><p class="font-body text-sm text-on-surface-variant leading-relaxed">Tecnologia sob medida com impacto real.</p></div></div></div>
+</section>
+<!-- 3. SEÇÃO NOSSOS PROJETOS: Fundo azul sólido, sem caixas cinzas em volta das imagens, imagens grandes com celulares reais fornecidos, sem bullets -->
+<section class="w-full bg-primary py-24 px-6 lg:px-12 text-white" id="projetos">
+<div class="max-w-7xl mx-auto flex flex-col gap-16">
+<!-- Header da Seção de Projetos -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<span class="font-code text-xs uppercase font-bold tracking-wider bg-white/15 px-3 py-1 rounded-md text-white">
+              Portfólio de Engenharia
+            </span>
+<h2 class="font-display font-extrabold text-4xl sm:text-5xl tracking-tight text-white mt-3">
+              Nossos Projetos
+            </h2>
+<p class="text-blue-100 text-lg mt-2 font-normal">
+              Soluções reais que transformam operações e entidades de grande porte
+            </p>
+</div>
+<div class="font-code text-xs font-bold bg-white/20 px-4 py-2 rounded-lg text-white w-fit">
+            PROJETOS REAIS EM PRODUÇÃO
+          </div>
+</div>
+<!-- Lista dos Projetos com Imagens Grandes e Sem Containers Cinzas -->
+<div class="flex flex-col gap-12"><!-- CARD 1: OAB ELEIÇÕES (Lado a Lado) -->
+<div class="bg-white text-on-surface rounded-3xl p-8 sm:p-12 shadow-xl border border-white/20 overflow-hidden">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+    <div class="flex flex-col justify-center text-left order-2 md:order-1">
+      <span class="font-code text-xs uppercase font-bold tracking-wider text-primary mb-2">App Mobile • SP &amp; MG</span>
+      <h3 class="font-display font-extrabold text-3xl sm:text-4xl text-on-surface tracking-tight mb-4">OAB Eleições</h3>
+      <p class="font-body text-slate-600 text-base sm:text-lg leading-relaxed mb-6">
+        Processo eleitoral digital e simplificado para chapas de advogados das seccionais paulista e mineira. Em 2024, a Mércure desenvolveu a plataforma oficial para tornar a formação e o registro das chapas mais simples, seguro e organizado.
+      </p>
+      <div>
+        <a class="inline-flex items-center gap-2 font-display font-bold text-primary hover:text-primary-dark text-base transition-colors" href="#contato">
+          <span class="">Conhecer projeto</span>
+          <span class="material-symbols-outlined text-lg">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+    <div class="flex justify-center items-center order-1 md:order-2">
+      <img alt="Telas do aplicativo OAB Eleições" class="w-full max-h-[460px] object-contain drop-shadow-md select-none" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOX_p5IoJGsL6kaWLHVdFlNnKynINl4F40ZwUqoi9clCU-IvxvCTQ7-yVtGmRIcu4p4X84hPAgez-CAAlIe-15lmQmxFQLVvGNzIU0NYPcE3_nwJ6Ru7TkDFON2zLK8G2-RkHFt4dwHkWehWTVygaV4S5bts73D0X8nRhZLJkWzUpqIaCEkaYXkBE9IkgXEYbWmOo10wVEQFoZkXer79PQ7HMjyCFucDfAP81i5p_cItfkfRN65G-GNnUP8DKBl4ToFy0">
+    </div>
+  </div>
+</div>
+
+<!-- CARD 2: OAB AVALIAÇÕES (Lado a Lado Alternado) -->
+<div class="bg-white text-on-surface rounded-3xl p-8 sm:p-12 shadow-xl border border-white/20 overflow-hidden">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+    <div class="flex justify-center items-center order-1">
+      <img alt="Smartphone OAB Avaliações com tela de busca e cartórios" class="w-full max-h-[460px] object-contain drop-shadow-md select-none" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwCdg02G0wSh0j3Rz_s0AkXaBTXZS0Cvw0GCRHBRI0rGS4jsaRo1HGZxmFuic2AXjbiSczywtE_2dycNX28u5sXFiPlG9h5VWE3W09IPNTdeg747__RJFQE2_WVrZjVa5t9UvBRtdwfErRSDSUjUnzfvcuFJ3GOqWCjbvDwv_EL0sjjeLf_xpe_LfXbcSezG3WJXfasGdkyxm1eGLcfPQ_YPcsk_BjlV6sNk5f3CbyNwsVMUDtcB0bP2ddnlTs3RLQZEU">
+    </div>
+    <div class="flex flex-col justify-center text-left order-2">
+      <span class="font-code text-xs uppercase font-bold tracking-wider text-primary mb-2">Mobile &amp; Painel Administrativo</span>
+      <h3 class="font-display font-extrabold text-3xl sm:text-4xl text-on-surface tracking-tight mb-4">OAB Avaliações</h3>
+      <p class="font-body text-slate-600 text-base sm:text-lg leading-relaxed mb-6">
+        Avaliação jurídica de cartórios e varas com moderação, geolocalização e acompanhamento analítico em tempo real para a comunidade jurídica e membros inscritos da ordem.
+      </p>
+      <div>
+        <a class="inline-flex items-center gap-2 font-display font-bold text-primary hover:text-primary-dark text-base transition-colors" href="#contato">
+          <span class="">Conhecer projeto</span>
+          <span class="material-symbols-outlined text-lg">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CARD 3: ELO (Lado a Lado) -->
+<div class="bg-white text-on-surface rounded-3xl p-8 sm:p-12 shadow-xl border border-white/20 overflow-hidden">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+    <div class="flex flex-col justify-center text-left order-2 md:order-1">
+      <span class="font-code text-xs uppercase font-bold tracking-wider text-primary mb-2">Plataforma de Comunicação</span>
+      <h3 class="font-display font-extrabold text-3xl sm:text-4xl text-on-surface tracking-tight mb-4">Elo</h3>
+      <p class="font-body text-slate-600 text-base sm:text-lg leading-relaxed mb-6">
+        Orquestração corporativa e conexão contínua de canais para agilizar diálogos e atendimento. Automatize sua comunicação no WhatsApp sem perder a essência do contato humano com ferramentas poderosas.
+      </p>
+      <div>
+        <a class="inline-flex items-center gap-2 font-display font-bold text-primary hover:text-primary-dark text-base transition-colors" href="#contato">
+          <span class="">Conhecer projeto</span>
+          <span class="material-symbols-outlined text-lg">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+    <div class="flex justify-center items-center order-1 md:order-2">
+      <img alt="Plataforma Elo - Conexão e Comunicação" class="w-full max-h-[380px] object-contain drop-shadow-md select-none rounded-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEl49nOGBfuNUdAsoNzjK9Az_fjc0jaauZlnOvu6GxDsUTPUA-Yy7b_s7TvK6VYdSA_EHnXMYR3MuaFx4tuBb2GeLQ5aPVbAF7m69EOKytWOCQnEoawzwgpuPsPVMixKnfcB-TEcr9yuMzJ6v6_DC-C4zqVzVLtQji2_FcwIXsIQaQffbQB8qvJrnuskNBxQbLtINe5dDZfMskOnhhT5YdsUQ2FzDmp7a5WuvFWrLOfrSOS0Pjc52q5-h2NZPnPozc9Wo">
+    </div>
+  </div>
+</div></div>
+</div>
+</section>
+<!-- <!-- 4. SEÇÃO NOSSA EQUIPE: Limpa, 4 membros individuais sem bullets --> -->
+<!-- <section class="w-full bg-white py-24 px-6 lg:px-12 border-t border-outline-subtle" id="equipe"> -->
+<!-- <div class="max-w-7xl mx-auto flex flex-col gap-16"> -->
+<!-- <div class="flex flex-col items-center text-center max-w-2xl mx-auto"> -->
+<!-- <span class="font-code text-xs uppercase font-bold tracking-wider text-primary bg-blue-50 px-4 py-1.5 rounded-full mb-3"> -->
+<!--             Talento Técnico -->
+<!--           </span> -->
+<!-- <h2 class="font-display font-extrabold text-4xl text-on-surface tracking-tight"> -->
+<!--             Nossa Equipe -->
+<!--           </h2> -->
+<!-- <p class="font-body text-slate-600 text-lg mt-2"> -->
+<!--             Os profissionais que fazem acontecer. -->
+<!--           </p> -->
+<!-- </div> -->
+<!-- <!-- Grid 4 Membros --> -->
+<!-- <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"> -->
+<!-- <!-- Renato --> -->
+<!-- <div class="p-8 rounded-2xl border border-blue-100 bg-white hover:border-primary transition-colors flex flex-col items-center text-center shadow-sm"> -->
+<!-- <div class="w-20 h-20 rounded-full bg-primary text-white flex items-center justify-center font-display font-extrabold text-2xl mb-6 shadow-sm"> -->
+<!--               R -->
+<!--             </div> -->
+<!-- <h3 class="font-display font-bold text-xl text-on-surface">Renato</h3> -->
+<!-- <span class="font-code text-xs font-semibold text-primary mt-1">Co-fundador &amp; Tech Lead</span> -->
+<!-- <p class="font-body text-slate-600 text-sm mt-4 leading-relaxed"> -->
+<!--               Arquiteto de Software. Lidera a definição das diretrizes técnicas, arquitetura de microserviços e padrões de engenharia dos sistemas Mércure. -->
+<!--             </p> -->
+<!-- </div> -->
+<!-- <!-- Murilo --> -->
+<!-- <div class="p-8 rounded-2xl border border-blue-100 bg-white hover:border-primary transition-colors flex flex-col items-center text-center shadow-sm"> -->
+<!-- <div class="w-20 h-20 rounded-full bg-primary text-white flex items-center justify-center font-display font-extrabold text-2xl mb-6 shadow-sm"> -->
+<!--               M -->
+<!--             </div> -->
+<!-- <h3 class="font-display font-bold text-xl text-on-surface">Murilo</h3> -->
+<!-- <span class="font-code text-xs font-semibold text-primary mt-1">Co-fundador &amp; DevOps / Cloud</span> -->
+<!-- <p class="font-body text-slate-600 text-sm mt-4 leading-relaxed"> -->
+<!--               Engenheiro de Infraestrutura e Cloud. Especialista em pipelines CI/CD, segurança de clusters Kubernetes e alta disponibilidade em nuvem. -->
+<!--             </p> -->
+<!-- </div> -->
+<!-- <!-- Lukas --> -->
+<!-- <div class="p-8 rounded-2xl border border-blue-100 bg-white hover:border-primary transition-colors flex flex-col items-center text-center shadow-sm"> -->
+<!-- <div class="w-20 h-20 rounded-full bg-primary text-white flex items-center justify-center font-display font-extrabold text-2xl mb-6 shadow-sm"> -->
+<!--               L -->
+<!--             </div> -->
+<!-- <h3 class="font-display font-bold text-xl text-on-surface">Lukas</h3> -->
+<!-- <span class="font-code text-xs font-semibold text-primary mt-1">Engenheiro Full Stack</span> -->
+<!-- <p class="font-body text-slate-600 text-sm mt-4 leading-relaxed"> -->
+<!--               Engenheiro de Software Full Stack. Constrói interfaces ultra responsivas e APIs de alta vazão com foco em velocidade e experiência impecável. -->
+<!--             </p> -->
+<!-- </div> -->
+<!-- <!-- Renan --> -->
+<!-- <div class="p-8 rounded-2xl border border-blue-100 bg-white hover:border-primary transition-colors flex flex-col items-center text-center shadow-sm"> -->
+<!-- <div class="w-20 h-20 rounded-full bg-primary text-white flex items-center justify-center font-display font-extrabold text-2xl mb-6 shadow-sm"> -->
+<!--               R -->
+<!--             </div> -->
+<!-- <h3 class="font-display font-bold text-xl text-on-surface">Renan</h3> -->
+<!-- <span class="font-code text-xs font-semibold text-primary mt-1">Software &amp; Mobile Developer</span> -->
+<!-- <p class="font-body text-slate-600 text-sm mt-4 leading-relaxed"> -->
+<!--               Engenheiro de Software &amp; Desenvolvedor Mobile. Especialista em ecossistemas móveis nativos e híbridos com alta consistência transacional. -->
+<!--             </p> -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- </section> -->
+<!-- 5. SEÇÃO DE CONTATO: Fundo azul sólido elegante, botão de WhatsApp e canal oficial -->
+<section class="w-full bg-primary py-24 px-6 lg:px-12 text-white" id="contato">
+<div class="max-w-4xl mx-auto flex flex-col items-center text-center gap-10">
+<div class="flex flex-col items-center gap-3">
+<span class="font-code text-xs uppercase font-bold tracking-wider bg-white/15 px-4 py-1.5 rounded-full text-white">
+            Vamos Conversar
+          </span>
+<h2 class="font-display font-extrabold text-3xl sm:text-5xl tracking-tight text-white mt-2 leading-tight">
+            Pronto para levar seu software acima das estrelas?
+          </h2>
+<p class="font-body text-blue-100 text-base sm:text-lg max-w-xl mt-2 leading-relaxed">
+            Fale diretamente com os fundadores e arquitetos de software da Mércure. Avaliamos sua demanda técnica com agilidade e precisão.
+          </p>
+</div>
+<!-- Cartão de Contato Oficial -->
+<div class="w-full max-w-2xl bg-white text-on-surface p-8 rounded-3xl shadow-2xl flex flex-col sm:flex-row items-center justify-between gap-6">
+<div class="flex flex-col text-left">
+<span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Canal Oficial</span>
+<span class="font-display font-bold text-xl sm:text-2xl text-on-surface">contato@mercure.dev</span>
+<span class="text-sm text-slate-600 mt-1">São Paulo, Brasil • Atendimento Enterprise</span>
+</div>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-primary text-white font-display font-bold text-base px-6 py-3.5 rounded-xl hover:bg-primary-dark transition-all shadow-md whitespace-nowrap" href="https://wa.me/5511999999999" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-xl">chat</span>
+<span class="">Falar no WhatsApp</span>
+</a>
+</div>
+<div class="flex flex-wrap justify-center items-center gap-8 text-white/80 font-code text-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base">schedule</span>
+<span class="">Resposta ágil</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base">lock</span>
+<span class="">Sigilo &amp; NDA sob demanda</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Rodapé Limpo -->
+<footer class="w-full bg-white border-t border-outline-subtle py-12 px-6 lg:px-12">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-3">
+<img alt="Mércure Logo" class="h-7 w-7 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtVHZUq5Rd5fA-gV2qOkLwYYKbdzURDk758OdeCxdwN9ZR3G0631_o0LDE0jm2Mr4QC7E6B3vN9pM7odMKqzEnuleHC8icjsgI-52ofGyQ_hrACx1BMn25pnvUub2QkL7L78HM2U7gAOsp1wjYATzcLOr7_oCZKTVyUxnCsjrj3o8o2_E3n3Cl2nxDUJKsLGv5_DqDzLkWVdIA9bzChwY6_uQ28bQ4ciJzkCB1XOLR-aWUwBzZcaP6IDP6QcJ8HqB0iE8">
+<span class="font-display font-extrabold text-lg text-on-surface">Mércure</span>
+<span class="font-code text-xs text-primary font-bold bg-blue-50 px-2 py-0.5 rounded">SOFTWARE HOUSE</span>
+</div>
+<p class="font-body text-sm text-slate-500 text-center md:text-left">
+        © 2025 Mércure Software House. Todos os direitos reservados.
+      </p>
+<div class="flex items-center gap-6">
+<a class="text-sm text-slate-600 hover:text-primary transition-colors font-medium" href="#inicio">Início</a>
+<a class="text-sm text-slate-600 hover:text-primary transition-colors font-medium" href="#missao">Sobre</a>
+<a class="text-sm text-slate-600 hover:text-primary transition-colors font-medium" href="#projetos">Projetos</a>
+<a class="text-sm text-slate-600 hover:text-primary transition-colors font-medium" href="#contato">Contato</a>
+</div>
+</div>
+</footer>
+
+
+</body></html>
